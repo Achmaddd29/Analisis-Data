@@ -17,7 +17,7 @@ selected_analysis = st.sidebar.radio("Pilih Analisis yang Ingin Ditampilkan:",
 # Load and prepare the dataset
 @st.cache_data
 def load_data():
-    daily_data = pd.read_csv('C:/Users/Achmad Warsito S/proyek_analisis_data/dataset/day.csv')
+    daily_data = pd.read_csv('dashboard/day.csv')
     daily_data['dteday'] = pd.to_datetime(daily_data['dteday'])
     daily_data_2011 = daily_data[daily_data['dteday'].dt.year == 2011]
     return daily_data_2011
